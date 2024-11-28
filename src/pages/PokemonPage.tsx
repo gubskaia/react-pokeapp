@@ -1,19 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../styles/PokemonPage.css";
-import pokemonLogo from "/public/logo.png";  // Убедитесь, что путь к лого правильный
+import pokemonLogo from "/public/logo.png";
+import axios from "axios";
 
-const PokemonPage = () => {
-    const { id } = useParams();
-    const [pokemon, setPokemon] = useState(null);
+const PokemonPage: React.FC = () => {
+    const { id } = useParams<{ id: string }>();
+    const [pokemon, setPokemon] = useState<any>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string>("");
 
     useEffect(() => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-            .then((response) => response.json())
-            .then((data) => setPokemon(data));
+        const fetchPokemon = async () => {
+            try {
+                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+                setPokemon(response.data);
+                setLoading(false);
+            } catch (error) {
+                setError("Failed to fetch pokemon details");
+                setLoading(false);
+            }
+        };
+
+        fetchPokemon();
     }, [id]);
 
-    if (!pokemon) return <p className="loading">Loading...</p>;
+    if (loading) return <p className="loading">Loading...</p>;
+    if (error) return <div>{error}</div>;
 
     return (
         <div className="pokemon-page">

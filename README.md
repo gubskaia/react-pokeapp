@@ -1,8 +1,45 @@
-# React + Vite
+# React PokeApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that fetches and displays Pokémon data using the PokeAPI. The app consists of two pages:
 
-Currently, two official plugins are available:
+1. **PokemonsList** - Displays a list of Pokémon names.
+2. **PokemonPage** - Shows detailed information about a selected Pokémon.
+***
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Fetches data from the [PokeAPI](https://pokeapi.co/api/v2/pokemon/).
+- Uses React Router for navigation between the list and details page.
+- Axios for API requests.
+- React Router for navigation.
+***
+
+## Demo
+
+![Demo GIF](./public/pokeapp.gif)
+***
+
+## Technologies Used
+
+- `React` - library for creating interactive user interfaces.
+- `Vite` - fast tool for building and serving web apps. 
+- `TypeScript` - superset of JavaScript with type checking.
+- `Axios` - library for making HTTP requests.
+- `React Router` - manages navigation between pages in a React app.
+- `CSS` - styles web pages.
+***
+
+## Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/gubskaia/react-pokeapp.git
+
+2. Install dependencies:
+   ```bash
+   cd react-pokeapp
+   npm install
+
+3.  Run the development server:
+   ```bash
+    npm run dev

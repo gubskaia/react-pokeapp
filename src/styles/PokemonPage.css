@@ -1,0 +1,102 @@
+.pokemon-page {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #87aaeb 0%, #d9cd83 100%);
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.pokemon-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow:
+            -2px -2px 0 #2a75bb,
+            2px -2px 0 #2a75bb,
+            -2px 2px 0 #2a75bb,
+            2px 2px 0 #2a75bb,
+            -3px 0px 0 #2a75bb,
+            3px 0px 0 #2a75bb,
+            0px -3px 0 #2a75bb,
+            0px 3px 0 #2a75bb,
+            0 0 20px #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+
+.pokemon-details-card {
+    position: relative;
+    background: #2a75bb;
+    border: 5px solid #ffcc00;
+    border-radius: 20px;
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-logo {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.pokemon-image {
+    background: #ffffff;
+    border: 3px solid #2a75bb;
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+.pokemon-stats {
+    background: #ffcc00;
+    border: 5px solid #2a75bb;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    color: #2a75bb;
+    margin-top: 15px;
+}
+
+.pokemon-stats p {
+    margin: 5px 5px;
+    font-weight: bold;
+}
+
+.back-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #2a75bb;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 3px solid #2a75bb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

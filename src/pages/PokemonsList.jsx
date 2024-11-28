@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/PokemonList.css"; // Импорт стилей
 
 const PokemonsList = () => {
     const [pokemons, setPokemons] = useState([]);
@@ -11,15 +12,18 @@ const PokemonsList = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Pokemons List</h1>
-            <ul>
+        <div className="pokemon-container">
+            <h1 className="pokemon-title">Pokémons List</h1>
+            <div className="pokemon-grid">
                 {pokemons.map((pokemon, index) => (
-                    <li key={index}>
-                        <Link to={`/pokemon/${index + 1}`}>{pokemon.name}</Link>
-                    </li>
+                    <div className="pokemon-card">
+                        <div className="pokemon-logo"></div>
+                        <Link to={`/pokemon/${index + 1}`} className="pokemon-link">
+                            {pokemon.name}
+                        </Link>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
